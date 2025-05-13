@@ -24,3 +24,8 @@ New-Item -ItemType File -Name user.models.js
 New-Item -ItemType File -Name video.models.js
 
 u fajlu package.json dodajemo skriptu za nodemon
+
+
+kreirali smo .env fajl i .env.sample
+instaliramo dotenv
+npm i dotenv
