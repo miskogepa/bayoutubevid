@@ -29,3 +29,6 @@ u fajlu package.json dodajemo skriptu za nodemon
 kreirali smo .env fajl i .env.sample
 instaliramo dotenv
 npm i dotenv
+
+instaliramo cors
+npm i cors
