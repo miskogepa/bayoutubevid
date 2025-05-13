@@ -14,3 +14,13 @@ New-Item -ItemType File -Name index.js
 New-Item -ItemType File -Name constants.js
 New-Item -ItemType File -Name .env
 New-Item -ItemType File -Name .env.sample
+
+fajlovi za models
+New-Item -ItemType File -Name comment.models.js
+New-Item -ItemType File -Name like.models.js
+New-Item -ItemType File -Name playlist.models.js
+New-Item -ItemType File -Name subscription.models.js
+New-Item -ItemType File -Name tweet.models.js
+New-Item -ItemType File -Name user.models.js
+New-Item -ItemType File -Name video.models.js
+
