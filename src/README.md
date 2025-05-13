@@ -1,6 +1,5 @@
 instaliran nodemon
 
-
 node_modules folder se dobija automatski kada se instalira nodemon i package-lock.json
 
 napravili smo src folder u njemu dodajemo fajlove pomocu komandi cd src to je da bi promenili rutu na src folder
@@ -24,3 +23,4 @@ New-Item -ItemType File -Name tweet.models.js
 New-Item -ItemType File -Name user.models.js
 New-Item -ItemType File -Name video.models.js
 
+u fajlu package.json dodajemo skriptu za nodemon
