@@ -4,6 +4,5 @@ const asyncHandler = (requestHandler) => {
   };
 };
 
-export{ asyncHandler }; 
+export { asyncHandler };
 // This function takes a request handler as an argument and returns a new function that handles the request.
-
