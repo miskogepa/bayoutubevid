@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import bcrypt from "bcrypt";
-import { use } from "react";
+import jwt from "jsonwebtoken";
 
 const userSchema = new Schema(
   {
@@ -65,7 +65,21 @@ userSchema.methods.isPasswordCorrect = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
-
+userSchema.methods.generateAccessToken = function () {
+  //short lived access token
+  return jwt.sign(
+    {
+      _id: this._id,
+      email: this.email,
+      username: this.username,
+      fullName: this.fullName,
+    },
+    process.env.ACCESS_TOKEN_SECRET,
+    {
+      expiresIn: process.env.ACCESS_TOKEN_EXPIRY || "15m",
+    }
+  );
+};
 
 export const User = mongoose.model("User", userSchema);
 // export default mongoose.model("User", userSchema);
