@@ -81,5 +81,20 @@ userSchema.methods.generateAccessToken = function () {
   );
 };
 
+
+userSchema.methods.generateRefreshToken= function () {
+  //short lived access token
+  return jwt.sign(
+    {
+      _id: this._id,
+     
+    },
+    process.env.REFRESH_TOKEN_SECRET,
+    {
+      expiresIn: process.env.REFRESH_TOKEN_EXPIRY || "15m",
+    }
+  );
+};
+
 export const User = mongoose.model("User", userSchema);
 // export default mongoose.model("User", userSchema);
